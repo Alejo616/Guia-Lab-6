@@ -1,0 +1,9 @@
+\addvspace {10\p@ }
+\contentsline {lemma}{\ifthmt@listswap \MakeUppercase {l}emma\nobreakspace {}1.1\else \numberline {1.1}\MakeUppercase {l}emma\fi }{17}{lemma.1.1}%
+\contentsline {claim}{\ifthmt@listswap \MakeUppercase {c}laim\nobreakspace {}1.1\else \numberline {1.1}\MakeUppercase {c}laim\fi }{17}{claim.1.1}%
+\contentsline {theorem}{\ifthmt@listswap \MakeUppercase {t}heorem\nobreakspace {}1.1\else \numberline {1.1}\MakeUppercase {t}heorem\fi }{17}{theorem.1.1}%
+\contentsline {example}{\ifthmt@listswap \MakeUppercase {e}xample\nobreakspace {}1.1\else \numberline {1.1}\MakeUppercase {e}xample\fi }{17}{example.1.1}%
+\contentsline {fact}{\ifthmt@listswap \MakeUppercase {f}act\nobreakspace {}1.1\else \numberline {1.1}\MakeUppercase {f}act\fi }{17}{fact.1.1}%
+\contentsline {remark}{\ifthmt@listswap \MakeUppercase {r}emark\nobreakspace {}1.1\else \numberline {1.1}\MakeUppercase {r}emark\fi }{17}{remark.1.1}%
+\contentsline {definition}{\ifthmt@listswap \MakeUppercase {d}efinition\nobreakspace {}A.1\else \numberline {A.1}\MakeUppercase {d}efinition\fi \thmtformatoptarg {Gaussian distribution}}{29}{definition.a.A.1}%
+\contentsline {theorem}{\ifthmt@listswap \MakeUppercase {t}heorem\nobreakspace {}A.1\else \numberline {A.1}\MakeUppercase {t}heorem\fi \thmtformatoptarg {Central limit theorem}}{29}{theorem.a.A.1}%
