@@ -1,0 +1,495 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+ \usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{url}
+\usepackage{appendix}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{parskip}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{vmargin}
+\usepackage{enumitem}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
+
+\title{Guía para Profesores}								% Title
+\author{Jaime Alberto Osorio Vélez\\
+Daniel Esteban Jaramillo \\
+Fernando Andrés Londoño Badillo}								% Author
+\date{Noviembre de 2022}											% Date
+
+\makeatletter
+\let\thetitle\@title
+\let\theauthor\@author
+\let\thedate\@date
+\makeatother
+
+\pagestyle{fancy}
+\fancyhf{}
+%\rhead{\theauthor}
+\lhead{\thetitle}
+\cfoot{\tiny LABORATORIOS INTEGRADOS DE FÍSICA PARA INGENIERÍA}
+\rfoot{\thepage}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{titlepage}
+	\centering
+    \vspace*{0.5 cm}
+    \includegraphics[scale = 1.0]{Logo-UdeA.png}\\[0.5 cm]	% University Logo
+    \textsc{\LARGE Universidad de Antioquia}\\[0.5 cm]	% University Name
+	\textsc{\Large Facultad de Ciencias Exactas y Naturales}\\[0.5 cm]
+	\textsc{\Large Instituto de Física}\\[2.5 cm]% Course Code
+	\textsc{\large Laboratorios Integrados de Física para Ingeniería}\\[0.5 cm]				% Course Name
+	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
+	{ \huge \bfseries \thetitle}\\
+	\rule{\linewidth}{0.2 mm} \\[1.0 cm]
+	
+	\begin{minipage}{0.6\textwidth}
+		\begin{flushleft} \large
+			\emph{Presentado por:}\\
+			\theauthor
+			\end{flushleft}
+			\end{minipage} \\[1 cm]
+	
+	{\large \thedate}\\[2 cm]
+ 
+	\vfill
+	
+\end{titlepage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\tableofcontents
+\pagebreak
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Descripción general y justificación del curso}
+
+Los Laboratorios de Ciencias Básicas tienen como objetivo principal la conceptualización de fenómenos físicos que ocurren en la naturaleza a partir de un trabajo experimental, así como desarrollar habilidades, tales como: la observación, análisis e interpretación de datos experimentales y en el manejo de instrumentos de medición.
+Durante la actividad experimental el estudiante desarrollará:
+Las capacidades lógicas y la creatividad necesarias para diseñar experimentos, las cuales se apoyan y nutren en aptitudes y destrezas mentales adquiridas en el estudio de la ciencia, en particular en las llamadas ciencias básicas y ciencias de la ingeniería.
+Para que el ingeniero pueda estar en aptitud de adquirir buen juicio profesional, las condiciones necesarias y suficientes son:
+
+\begin{enumerate}[label=\alph*)]
+%%%%%
+\item Tener el conocimiento científico de los fenómenos naturales con los que se lidia en el campo de la ingeniería de que se trate. Conocer los conceptos, principios, técnicas e instrumentos de medida y los fenómenos de interés en los principales campos de la Física: Mecánica y Termodinámica.
+%%%%%
+\item Comparar las predicciones que puede hacer a partir de los modelos teóricos (teniendo en cuenta las aproximaciones usadas en los modelos) con las mediciones realizadas en el laboratorio.
+%%%%%
+\item Aplicar este conjunto de conocimientos y métodos a la predicción rigurosa y detallada del comportamiento de lo que se diseña y se mide. Desarrollar la capacidad de medida de los diferentes tipos de magnitudes físicas y en sus diferentes rangos.
+%%%%%
+\item Estimar los errores sistemáticos y aleatorios e identificar las estrategias para su eliminación. Dominar la lógica de los procesos de deducción e inducción implícitos en el diagnóstico y el diseño.
+%%%%%
+\item Elaborar un informe que relacione el modelo teórico del fenómeno físico involucrado con el desarrollo experimental y el análisis de los resultados.
+%%%%%
+\end{enumerate}
+
+Para la formación integral de un ingeniero es indispensable integrar los conocimientos teóricos con muy buenas bases experimentales, que permitan la confrontación y/o verificación de los modelos, además de desarrollar destrezas y aptitudes que puedan aplicarse a problemas, ya sean de frontera o del campo de acción del profesional. 
+
+Por otro lado, la elaboración de informes de laboratorio tipo artículo científico, será un aspecto formativo para los estudiantes, y muy importante en la culminación de sus estudios cuando tengan que presentar un trabajo escrito sobre una investigación desarrollada ya que inciden en el mejoramiento de la comunicación escrita con calidad.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Objetivos}
+
+\subsection*{Objetivo general}
+
+Formar los estudiantes en la elaboración de experimentos y en la capacidad de comparar los resultados con los modelos teóricos. Deberán poder evaluar el significado de los resultados obtenidos en este contexto.
+
+\subsection*{Objetivos Específicos}
+
+\begin{itemize}
+    \item Ser capaces de evaluar el nivel de incertidumbre en sus resultados, comprender el significado del análisis de error.
+    \item Planear y ejecutar bajo la supervisión un experimento o investigación, analizar críticamente los resultados y sacar conclusiones válidas.
+    \item Adquirir habilidades experimentales para la elaboración y el uso de equipos de laboratorio, identificar las variables físicas a medir y las diferentes técnicas de medidas.
+    \item Interrelacionar conocimiento básico experimental, matemático y / o técnicas computacionales aplicables a un conjunto variado de proyectos dentro de la física.
+    \item Desarrollar habilidades para comunicar ideas científicas, como las conclusiones de un experimento, investigación o proyecto de manera concisa, exacta e informativa.
+    \item Manejar el propio aprendizaje y hacer uso de textos correctos, Indagar en artículos científicos y otras fuentes primarias. 
+\end{itemize}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Metodología}
+
+Los laboratorios estarán basados en la metodología de proponer preguntas y/o problemas, donde los estudiantes contarán con varias sesiones para realizar un(os) montaje(s) experimental(es) y responder a la pregunta inicial.  El formato general es que realicen 3 prácticas seleccionadas por el docente y una práctica final propuesta por cada grupo de estudiantes (práctica libre).
+
+Dentro de las prácticas que puede seleccionar el docente tenemos:   un modelo sencillo de la desintegración de una muestra radioactiva,   instrumentos de medidas y propagación de error,  medida del tiempo de reacción,  cálculo de la densidad de diferentes objetos, equilibrio de fuerzas,  disparar sobre un objeto en movimiento (carro) una masa en una colisión inelástica,  medir experimentalmente el momento de inercia de un objeto irregular,  elaboración y calibración de un dinamómetro,  medida del coeficiente de fricción por tres métodos,  medida de la gravedad,  medir la densidad lineal de una cuerda usando un sonómetro,  fuentes de campo magnético, construir un circuito RLC y medir la capacitancia por medio de la frecuencia de resonancia,  inducción electromagnética,  propiedades de las ondas electromagnéticas.
+
+Para cumplir con los objetivos propuestos, recomienda seguir las siguientes indicaciones:
+
+\begin{itemize}
+    \item Se llevará un registro de trabajo diario por grupo en un cuaderno de protocolo.
+    \item Al comenzar el semestre, a cada grupo de estudiantes se le asignará un cronograma de actividades a desarrollar durante el semestre, que contendrán las prácticas que debe montar, fechas de cada una y los materiales con los que cuentan. 
+    \item Al comenzar cada práctica los estudiantes deben tener en el cuaderno de protocolo una propuesta experimental, que les permita orientar sus actividades y así lograr sus objetivos. En esta fase inicial, el profesor podrá hacer una evaluación oral individual del por qué el montaje propuesto es viable para resolver el problema asignado. 
+    \item Después de desarrollada media práctica aproximadamente, los grupos de trabajo deberán entregar los avances realizados tanto teóricos como metodológicos en el formato de la \textbf{V de Gowin}.
+    \item Al finalizar cada práctica (4 ó 5 sesiones) los grupos de trabajo deben presentar un informe tipo artículo, poster o exposición con el formato de un evento científico y el cuaderno de protocolo.
+    \item Los grupos de trabajo deben hacer un proceso de evaluación de otro grupo, es decir, los estudiantes harán una co-evaluación de los artículos que les sean asignados, haciendo uso de un formato entregado por los profesores del curso. La co-evaluación NO afecta la nota del grupo que presentó el artículo, será la nota correspondiente al grupo que hizo la co-evaluación.
+\end{itemize}
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Evaluación}
+
+El curso de Laboratorio Integrado de Física ofrecido a la Facultad de Ingeniería de la Universidad de Antioquia, tiene dos versiones, dependiendo de la carrera a la cual pertenezcan los estudiantes matriculados.
+
+\subsection*{Cursos de 4 horas, 1 crédito}
+
+    \begin{longtable}[c]{|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Sistemas (503) y Ambiental (500)}}\\
+    \hline
+    Actividad & Porcentaje \\
+    \hline
+    \endfirsthead
+    \hline
+    \multicolumn{2}{ | c | }{Continuation of Table}\\
+    \hline
+    Actividad & Porcentaje\\
+    \hline
+    \endhead
+    \hline
+    \endfoot
+    \hline
+    \multicolumn{2} { c  }{}\\
+    \endlastfoot
+    Seguimiento (Evaluaciones individuales y una por cada práctica). & 25\% \\ \hline
+    (4) Bitácora y (3) V Gowin (segunda semana de cada práctica) & 15\% \\ \hline
+   3 Informes (primera, segunda, práctica libre). Los informes son de 4 & \\
+   páginas, donde los resultados (gráficos e incertidumbres), análisis & 30\% \\
+   y conclusiones cuentan como 3/5 partes de la nota. &  \\ \hline
+    Poster (tercera práctica) & 10\% \\ \hline
+    Co-evaluación (informe segunda práctica y poster) & 5\% \\ \hline
+    Exposición Trabajo final & 15\%\\
+    Anteproyecto 5\% & \\
+    Presentación 10\% & \\
+    Informe tipo artículo & \\ \hline
+    \end{longtable}
+
+
+
+
+
+\subsection*{Cursos de 6 horas, 2 créditos}
+
+    \begin{longtable}[c]{|c|c|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Telecomunicaciones (502)  y Civil (501)}}\\
+    \hline
+    Actividad & Porcentaje \\
+    \hline
+    \endfirsthead
+    \hline
+    \multicolumn{2}{ | c | }{Continuation of Table}\\
+    \hline
+    Actividad & Porcentaje\\
+    \hline
+    \endhead
+    \hline
+    \endfoot
+    \hline
+    \multicolumn{2} { c  }{}\\
+    \endlastfoot
+    Seguimiento (Evaluaciones individuales y una por cada práctica). & 20\% \\ \hline
+    (5) Bitácora y (4) V Gowin (segunda semana de cada práctica) & 15\% \\ \hline
+   3 Informes (primera, tercera, práctica libre). Los informes son de 4 & \\
+   páginas, donde los resultados (gráficos e incertidumbres), análisis & 30\% \\
+   y conclusiones cuentan como 3/5 partes de la nota. &  \\ \hline
+    2 Poster (segunda y cuarta práctica) & 15\% \\ \hline
+    Co-evaluación (informe tercera práctica y poster de la cuarta práctica) & 5\% \\ \hline
+    Exposición Trabajo final & 15\%\\
+    Anteproyecto 5\% & \\
+    Presentación 10\% & \\
+    Informe tipo artículo & \\ \hline
+    \end{longtable}
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Prácticas de Laboratorio}
+
+\subsection{Manejo de instrumentos, medidas e incertidumbre}
+
+Para esta práctica son necesarios los siguienes materiales:
+\begin{itemize}
+    \item Flexómetro
+    \item Pie de Rey
+    \item Balaza analógica y balanza digital
+    \item Tornillo micrométrico
+    \item Cronómetro
+    \item Beaker
+\end{itemize}
+
+\subsubsection{Actividad I: Uso de instrumentos}
+Indicar el uso correcto del tornillo micrométrico, pie de rey, flexómetro, balanza digital, balanza analógica y cronómetro, proponiendo por lo menos dos formas distintas de calcular la densidad para cada uno de los diferentes objetos. Además, se puede proponer la construcción de un reloj de agua o de arena para hacer énfasis en los tiempos de acción, reacción y en los errores que se cometen al tomar el tiempo de forma manual.
+
+\subsubsection{Actividad II: Propagación de error}
+
+\begin{itemize}
+    \item Realizar la propagación de error para los métodos de cálculo de densidad propuestos y sacar conclusiones.
+    \item Seleccionar un objeto y medirlo alrededor de 30 veces con cada instrumento. A partir de los resultados discutir los conceptos de precisión, incertidumbre, exactitud y sensibilidad.
+\end{itemize}
+
+\subsubsection{Actividad III: Construcción de gráficas}
+
+\begin{itemize}
+    \item Proponer la construcción de histogramas y gráficos relacionados con las medidas tomadas
+    \item Analizar, a partir de las gráficas e histogramas, los resultados obtenidos.
+    
+\end{itemize}
+
+\textbf{Preguntas de enlace:}
+\begin{enumerate}
+    \item ¿Cuál es la importancia de las cifras significativas en el proceso de medición?
+    \item ¿Existen instrumentos de medición adecuados para las diferentes magnitudes físicas?
+    \item ¿Cómo se pueden relacionar en un proceso de medición los conceptos de calibración, exactitud, precisión, sensibilidad y ajuste?
+    \item ¿Cómo es el procedimiento para calcular el error en las mediciones directas y en las indirectas?
+    \item ¿El procedimiento en la toma de medidas, influye en el valor del error?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Modelo sencillo de la desintegración de una muestra radioactiva}
+
+Para esta práctica son necesarios los siguienes materiales:
+\begin{itemize}
+    \item Tabla para experimento de desintegración radiactiva
+    \item Arandelas
+    \item Flexómetro
+    \item Pie de Rey
+    \item Balaza analógica y balanza digital
+\end{itemize}
+
+\subsubsection{Actividad I: Desintegración}
+Realizar el experimento como lo indica la guía en el apéndice \ref{prob} y realizar los ajustes para obtener el tiempo de vida media.
+
+\subsubsection{Actividad II: Distribución}
+\begin{enumerate}
+    \item Medir los diámetros de las arandelas usando el pie de rey y hacer una gráfica del número de arandelas en función del diámetro.
+    \item Pesar las arandelas usando la balanza y hacer una gráfica del número de arandelas en función del peso.
+\end{enumerate}
+
+\textbf{Preguntas de enlace:}
+\begin{enumerate}
+    \item ¿Qué tipos de escalas se usan en las gráficas y cuál es el fin?
+    \item ¿Cuáles tipos de distribución existen?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Medida del tiempo de reacción}
+
+Para esta práctica son necesarios los siguienes materiales:
+\begin{itemize}
+    \item Regla de madera de 100 cm
+    \item Cronómetro digital
+\end{itemize}
+
+\subsubsection{Actividad I: Medida del tiempo de acción reacción usando un cronómetro}
+
+\begin{itemize}
+    \item Tomar la menos 30 veces el tiempo que tarda cada estudiante en activar y desactivar un cronometro.
+    \item Comparar el promedio de los datos obtenidos con lo establecido en la teoría.
+    \item Construir histogramas y determinar variables estadísticas como son la media, la moda y la mediana.
+\end{itemize}
+
+\subsubsection{Actividad II: Medir tiempo de reacción indirectamente}
+
+\begin{itemize}
+    \item Realizar la experiencia que se indica en el documento anexo “tiempo de reacción” (ver \ref{t_recc}).
+    \item Compare los histogramas y las variables estadísticas de la Actividad I con esta actividad y saque conclusiones.
+\end{itemize}
+
+\textbf{Preguntas de enlace:}
+\begin{enumerate}
+    \item ¿Cuál actividad proporcionó datos acordes con lo reportado teóricamente? ¿Por qué?
+    \item ¿Existe mucha diferencia entre las variables estadísticas (media, moda, mediana) obtenidas por cada estudiante? Explique
+    \item ¿Existe mucha diferencia entre los histogramas?
+    \item ¿Es posible construir un modelo físico con los datos obtenidos?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Cálculo de la densidad de diferentes objetos}
+
+Para esta práctica son necesarios los siguienes materiales:
+\begin{itemize}
+    \item Objetos de diferentes materiales y formas
+    \item Balanza analógica y balanza digital
+    \item Flexómetro
+    \item Pie de Rey
+    \item Tornillo micrométrico
+    \item Probeta
+    \item Soporte con brazo
+\end{itemize}
+
+\subsubsection{Actividad I: Determinación de la densidad geométrica de los objetos}
+
+\begin{itemize}
+    \item Tomar objetos con diferentes geometrías y calcular el volumen de los mismos (usar al menos dos instrumentos de medida con diferente sensibilidad).
+    \item Medir la masa de los objetos previamente estudiados usando las balanzas digital y analógica.
+    \item Construir una tabla con los valores de densidad de los objetos y su respectivo cálculo de error.
+\end{itemize}
+
+\subsubsection{Actividad II: Determinación de la densidad usando el principio de Arquímedes}
+
+\begin{itemize}
+    \item Medir nuevamente la masa de los objetos medidos en la Actividad I.
+    \item Realizar el montaje para aplicar el principio de Arquímedes y determinar el empuje de los diferentes objetos.
+    \item Construir una tabla donde se encuentre el cálculo de la densidad usando el principio de Arquímedes con sus respectivos cálculos de error.
+\end{itemize}
+
+\textbf{Preguntas de enlace:}
+\begin{enumerate}
+    \item ¿Qué característica debe tener un cuerpo para poder medir su densidad por el método de Arquímedes?
+    \item ¿Para la determinación de densidad en objetos irregulares, cual método emplearía?
+    \item ¿Cuáles medidas son más sensibles al error?
+    \item ¿Cuál de los dos métodos de determinación de la densidad es mejor? ¿Por qué?
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+\subsection{Equilibrio de fuerzas}
+
+Para esta práctica son necesarios los siguienes materiales:
+\begin{itemize}
+    \item Mesa de fuerzas concurrentes
+    \item Flexómetro
+    \item Transportador
+    \item Regla de madera de 100 cm
+    \item Poleas y soportes
+    \item Resortes
+    \item Balanza analógica 
+\end{itemize}
+
+\subsubsection{Actividad I: Equilibrio en un plano y el espacio con fuerzas concurrentes}
+
+\begin{itemize}
+    \item Medir los ángulos y los valores de las fuerzas de un sistema de fuerzas en equilibrio en un plano haciendo uso de la mesa de fuerzas concurrentes.
+    \item Medir los ángulos y las fuerzas de un sistema de fuerzas en equilibrio en el espacio haciendo uso de la mesa de fuerzas concurrentes y una polea fuera del plano.
+\end{itemize}
+
+\subsubsection{Actividad II: Equilibrio en el espacio con fuerzas NO concurrentes}
+
+\begin{itemize}
+    \item Medir los ángulos y las fuerzas de un sistema de fuerzas en equilibrio en un plano haciendo uso de una regla para un arreglo de fuerzas no concurrentes.
+    \item Medir los ángulos y las fuerzas de un sistema de fuerzas en equilibrio en el espacio haciendo uso de una regla para un arreglo de fuerzas no concurrentes.
+\end{itemize}
+
+\subsubsection{Actividad III: Realización de dos tipos de balanzas con la regla y calibración}
+
+Con la regla rígida hacer dos tipos de balanzas y pesar diferentes objetos que haya en el laboratorio, comparar los resultados y la precisión de cada balanza con los que arroja una balanza comercial. Evaluar en que situaciones es más conveniente cada tipo de balanza.
+
+\textbf{Preguntas de enlace:}
+¿Cuál es la diferencia entre fuerza equilibrante y fuerza resultante?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsection{Disparar sobre un objeto en movimiento (carro) una masa en una colisión inelástica}
+
+Para esta práctica son necesarios los siguienes materiales:
+\begin{itemize}
+    \item Patín de dinámica
+    \item Plano inclinado
+    \item Mini disparador Pasco
+    \item Flexómetro
+    \item Cronómetro o Fotocompuertas con Arduino
+    \item L\'aminas de fórmica
+    \item Cinta de enmascarar
+    \item Cámara (web o celular)
+    \item Computador con Tracker\footnote{\it Tracker is a free video analysis and modeling tool built on the Open Source Physics (OSP) Java framework. It is designed to be used in physics education. \url{https://physlets.org/tracker/}} 
+\end{itemize}
+
+\subsubsection{Actividad I: Caracterización del disparador Pasco}
+
+\begin{itemize}
+    \item Medir la constante elástica del resorte a utilizar.
+    \item Calcular la velocidad de salida del proyectil.
+    \item Medir la velocidad de salida con un disparo horizontal desde una altura conocida.
+    \item Realizar pruebas de lanzamiento de una esfera a diferentes ángulos.
+    \item Medir las distancias máximas.
+    \item Calcular teóricamente las distancias máximas.
+    \item Incluir la fricción de la esfera en el disparador y en el aire para las distancias máximas.
+\end{itemize}
+
+\subsubsection{Actividad II: Caracterización del objeto móvil (carro)}
+
+\begin{itemize}
+    \item Medir la velocidad del móvil después que sale de una rampa.
+    \item Calcular la velocidad del móvil teóricamente.
+    \item Medir la fricción del móvil sobre la superficie.
+    \item Incluir la fricción de la superficie y del aire en el cálculo teórico.
+\end{itemize}
+
+\subsubsection{Actividad III: Medir la deformación de la plastilina por una esfera metálica}
+
+\begin{itemize}
+    \item Calcular la energía de una esfera en caída libre desde diferentes alturas.
+    \item Medir la deformación de un bloque de plastilina cuando le cae una esfera desde diferentes alturas.
+    \item Correlacionar la deformación con la velocidad de la esfera al colisionar.
+\end{itemize}
+
+\subsubsection{Disparar sobre un objeto en movimiento (carro) una masa en una colisión inelástica}
+
+\begin{itemize}
+    \item Realizar los cálculos de la velocidad del móvil (carro) y de la velocidad de la masa (esfera metálica) al ser lanzada por el disparador, para que la esfera impacte en el carro en movimiento.
+    \item Realizar el experimento y comprobar los cálculos realizados.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\appendix
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Probabilidad}
+\label{prob}
+
+\section{Tiempo de Reacción}
+\label{t_recc}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{About this design}
+This is a simple report template with the UCT logo. Feel free to use/modify it to suit your needs. Variables that need to be altered have been commented to make modifications easier. For example if you need to change the university logo, look for the comment \texttt{\% University Logo} in this file and then make appropriate modifications in that line.
+
+A Table of Contents and a bibliography have also been implemented. To add entries to your bibliography, simply edit \texttt{biblist.bib} in the root folder and then use the \texttt{\textbackslash cite\{\ldots\}} command in \texttt{main.tex} \cite{bibtex}. The Table of Contents will be updated automatically.
+
+I hope that you find this template both visually appealing and useful. \\
+
+\hspace{1 cm}--- Linus
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\newpage
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{biblist}
+
+\end{document}
